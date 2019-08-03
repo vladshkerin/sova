@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-nav {
+    font-size: 16px;
+}
+
+.site-list {
+    list-style: none;
+}
+
+.main-header {
+    text-align: center;
+}
