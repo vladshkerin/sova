@@ -1,18 +1,20 @@
 body {
     margin: 0;
     padding: 0;
+    width: 1200px;
 
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
     color: black;
-    text-transform: uppercase;
 }
 
 a {
     text-decoration: none;
 }
+
+/* header */
 
 .main-nav {
     font-size: 16px;
@@ -22,6 +24,81 @@ a {
     list-style: none;
 }
 
+.site-list__item {
+    text-transform: uppercase;
+}
+
+/* main */
+
 .main-header {
     text-align: center;
+    min-height: 675px;
+
+    background-color: #345288;
+    background-image: url("../img/owl_backbround.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.main-header__company-name {
+    font-size: 55px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: lowercase;
+    letter-spacing: 30px;
+}
+
+.main-header__company-specialization {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.main-header__company-description {
+    font-size: 30px;
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.documents-list {
+    list-style: none;
+}
+
+.documents-list__item {
+}
+
+.documents-list__item-header {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* footer */
+.contacts-header {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contacts-list {
+    list-style: none;
+}
+
+.contacts-item_header {
+    font-size: 25px;
+}
+
+.contacts-list_item {
+    width: 150px;
+    height: 150px;
+    outline: 1px red dashed;
+}
+
+.contacts-list_item-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.contacts-list_item-value {
+    font-size: 15px;
 }
