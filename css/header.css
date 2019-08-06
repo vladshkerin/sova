@@ -1,13 +1,45 @@
 /* header */
 
+.page-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header__logo {
+    width: 120px;
+    height: 80px;
+
+    text-align: center;
+}
+
+.page-header__logo-image {
+    width: 88px;
+    height: 80px;
+}
+
 .main-nav {
+    min-width: 300px;
+    min-height: 80px;
+
     font-size: 16px;
 }
 
 .site-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 25px;
+    padding: 0;
+
     list-style: none;
 }
 
 .site-list__item {
+    margin-right: 20px;
+
     text-transform: uppercase;
 }
