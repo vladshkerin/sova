@@ -1,18 +1,27 @@
+/* scaffolding */
+
 body {
+    min-width: 1200px;
     margin: 0;
     padding: 0;
-    width: 1200px;
 
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 14px;
-    line-height: 24px;
     font-weight: 700;
+    font-style: normal;
+    line-height: 24px;
     color: black;
 }
 
 a {
     text-decoration: none;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* header */
 
@@ -28,6 +37,7 @@ a {
     text-transform: uppercase;
 }
 
+
 /* main */
 
 .main-header {
@@ -35,7 +45,7 @@ a {
     min-height: 675px;
 
     background-color: #345288;
-    background-image: url("../img/owl_backbround.png");
+    background-image: url("../img/bg_main.png");
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -74,31 +84,43 @@ a {
     font-weight: bold;
 }
 
+
 /* footer */
+
+.contacts {
+    background-color: #345288;
+}
+
 .contacts-header {
     font-size: 30px;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .contacts-list {
     list-style: none;
 }
 
-.contacts-item_header {
-    font-size: 25px;
-}
-
 .contacts-list_item {
     width: 150px;
     height: 150px;
-    outline: 1px red dashed;
 }
 
-.contacts-list_item-icon {
-    width: 100px;
-    height: 100px;
+.contacts-list_item-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+
+    text-transform: uppercase;
 }
 
 .contacts-list_item-value {
     font-size: 15px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.copyright_description {
+    font-size: 15px;
+    font-weight: bold;
 }
