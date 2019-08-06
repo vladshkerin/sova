@@ -1,0 +1,13 @@
+/* header */
+
+.main-nav {
+    font-size: 16px;
+}
+
+.site-list {
+    list-style: none;
+}
+
+.site-list__item {
+    text-transform: uppercase;
+}
