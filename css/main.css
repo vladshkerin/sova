@@ -1,8 +1,14 @@
 /* main */
 
+.page-main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .main-header {
-    text-align: center;
     min-height: 675px;
+
+    text-align: center;
 
     background-color: #345288;
     background-image: url("../img/bg_main.png");
@@ -11,6 +17,11 @@
 }
 
 .main-header__company-name {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-left: 20px;
+
     font-size: 55px;
     font-weight: bold;
     color: #ffffff;
@@ -19,6 +30,10 @@
 }
 
 .main-header__company-specialization {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 80px;
+
     font-size: 35px;
     font-weight: bold;
     color: #ffffff;
@@ -26,6 +41,10 @@
 }
 
 .main-header__company-description {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 160px;
+
     font-size: 30px;
     font-weight: normal;
     color: #ffffff;
