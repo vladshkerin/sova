@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Торговая компания «СОВА»</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic"
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
           rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -12,8 +12,7 @@
 
 <header class="page-header">
     <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype.png"
-             width="88" height="65" alt="Торговая компания «СОВА»">
+        <img src="img/logotype-owl.svg" alt="Торговая компания «СОВА»" class="page-header__logo-image">
     </a>
     <div class="main-nav__wrapper">
         <nav class="main-nav">
@@ -33,26 +32,26 @@
     </section>
 
     <section class="documents">
-        <ul class="documents-list">
-            <li class="documents-list__item">
-                <h1 class="documents-list__item-header">Факты</h1>
-                <a class="documents-list__item-file">
-                    <img class="documents-list__item-image" src="img/fact_1.png"
-                         width="266" height="199" alt="Документы фактов">
+        <ul class="documents">
+            <li class="documents-fact">
+                <h1 class="documents-fact__header">Факты</h1>
+                <a class="documents-fact__file">
+                    <img class="documents-fact__file-image"
+                         src="img/document-fact.png" alt="Документы фактов">
                 </a>
             </li>
-            <li class="documents-list__item">
-                <h1 class="documents-list__item-header">Аргументы</h1>
-                <a class="documents-list__item-file">
-                    <img class="documents-list__item-image" src="img/fact_2.png"
-                         width="266" height="199" alt="Документы аргументы">
+            <li class="documents-argument">
+                <h1 class="documents-argument__header">Аргументы</h1>
+                <a class="documents-argument__file">
+                    <img class="documents-argument__file-image"
+                         src="img/document-argument.png" alt="Документы аргументы">
                 </a>
             </li>
-            <li class="documents-list__item">
-                <h1 class="documents-list__item-header">Публикации</h1>
-                <a class="documents-list__item-file">
-                    <img class="documents-list__item-image" src="img/fact_3.png"
-                         width="266" height="199" alt="Документы публикации">
+            <li class="documents-publication">
+                <h1 class="documents-publication__header">Публикации</h1>
+                <a class="documents-publication__file">
+                    <img class="documents-publication__file-image"
+                         src="img/document-publication.png" alt="Документы публикации">
                 </a>
             </li>
         </ul>
@@ -61,31 +60,21 @@
 
 <footer class="page-footer">
     <section class="contacts">
-        <h1 class="contacts-header">Наши контакты</h1>
         <ul class="contacts-list">
-            <li class="contacts-list_item">
-                <h1 class="contacts-list_item-header">Address</h1>
-                <p class="contacts-list_item-picture">
-                    <img class="contacts-list_item-icon" src="img/globe.png"
-                         width="60" height="60" alt="Карта">
-                </p>
-                <a class="contacts-list_item-value" href="index.html">61 Oxford str., London, 3DG</a>
+            <li class="contacts-item">
+                <h1 class="contacts-item_header">Address</h1>
+                <img class="contacts-item_icon" src="img/map.svg" alt="Карта">
+                <a class="contacts-item_map" href="map.yandex.ru"></a>
             </li>
-            <li class="contacts-list_item">
-                <h1 class="contacts-list_item-header">Phone number</h1>
-                <p class="contacts-list_item-picture">
-                    <img class="contacts-list_item-icon" src="img/phone.png"
-                         width="60" height="60" alt="Телефон">
-                </p>
-                <tel class="contacts-list_item-value">1-800-643-4500</tel>
+            <li class="contacts-item">
+                <h1 class="contacts-item_header">Phone number</h1>
+                <img class="contacts-item_icon" src="img/phone.svg" alt="Телефон">
+                <tel class="contacts-item_telephone">1-800-643-4500</tel>
             </li>
-            <li class="contacts-list_item">
-                <h1 class="contacts-list_item-header">Email</h1>
-                <p class="contacts-list_item-picture">
-                    <img class="contacts-list_item-icon" src="img/email.png"
-                         width="60" height="60" alt="Почта">
-                </p>
-                <email class="contacts-list_item-value">info@company24.com</email>
+            <li class="contacts-item">
+                <h1 class="contacts-item_header">Email</h1>
+                <img class="contacts-item_icon" src="img/email.svg" alt="Почта">
+                <email class="contacts-item_email">info@company24.com</email>
             </li>
         </ul>
     </section>
