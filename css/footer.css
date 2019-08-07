@@ -1,25 +1,48 @@
 /* footer */
 
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .contacts {
+    margin-top: 20px;
+    min-height: 260px;
+
+    text-align: center;
+
     background-color: #345288;
 }
 
 .contacts-header {
+    margin: 15px 0 0;
+
     font-size: 30px;
     font-weight: bold;
     color: #ffffff;
 }
 
 .contacts-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
 .contacts-list_item {
-    width: 150px;
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-height: 170px;
 }
 
 .contacts-list_item-header {
+    margin: 20px 0 0;
+
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
@@ -27,13 +50,28 @@
     text-transform: uppercase;
 }
 
+.contacts-list_item-picture {
+    order: -1;
+    margin: 35px 0 0;
+}
+
 .contacts-list_item-value {
+    margin: 20px 0 0;
+
     font-size: 15px;
     font-weight: bold;
     color: #00ff00;
 }
 
+.copyright {
+    min-height: 45px;
+
+    text-align: center;
+}
+
 .copyright_description {
+    margin: 10px 0 0;
+
     font-size: 15px;
     font-weight: bold;
 }
