@@ -3,42 +3,54 @@
 .page-header {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 1200px;
     margin: 0 auto;
 }
 
 .page-header__logo {
-    width: 120px;
-    height: 80px;
+    height: 84px;
 
     text-align: center;
 }
 
-.page-header__logo-image {
+.page-header__logo img {
     width: 88px;
-    height: 80px;
+    height: 65px;
+    padding: 10px 10px;
 }
 
 .main-nav {
-    min-width: 300px;
-    min-height: 80px;
-
-    font-size: 16px;
+    width: 200px;
 }
 
-.site-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 25px 0 0;
+.main-nav__list {
+    margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
-.site-list__item {
-    margin-right: 20px;
+.site-list {
+    display: flex;
+    justify-content: center;
 
+    font-weight: bold;
+}
+
+.site-list__item a {
+    display: block;
+    padding: 30px 10px;
+
+    font-size: 16px;
+
+    color: #000000;
     text-transform: uppercase;
+}
+
+.site-list__item a:hover {
+    background-color: #e6efff;
+}
+
+.site-list__item a:active {
+    background-color: #345288;
 }
