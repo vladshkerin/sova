@@ -68,10 +68,14 @@
 }
 
 .documents-list__item {
+    display: flex;
+    flex-direction: column;
+
     text-align: center;
 }
 
 .documents-list__item-file {
+    order: -1;
     display: block;
     min-height: 206px;
 }
