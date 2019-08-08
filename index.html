@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Торговая компания «СОВА»</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd30d275-b73a-4297-81d8-52e146fd72fa&lang=ru_RU&load=Geolink"
+            type="text/javascript"></script>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/scaffolding.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
@@ -13,17 +15,16 @@
 
 <header class="page-header">
     <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logotype.png"
-             width="88" height="65" alt="Торговая компания «СОВА»">
+        <img src="img/logotype.png" width="88" height="65" alt="Торговая компания «СОВА»">
     </a>
 
     <nav class="main-nav">
         <ul class="main-nav__list site-list">
             <li class="site-list__item">
-                <a href="index.html">Документы</a>
+                <a href="#documents">Документы</a>
             </li>
             <li class="site-list__item">
-                <a href="index.html">Контакты</a>
+                <a href="#documents">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -36,7 +37,7 @@
         <p class="main-header__company-description">Специализируемся на продаже алкоголя</p>
     </section>
 
-    <section class="documents">
+    <section class="documents" id="documents">
         <ul class="documents-list">
             <li class="documents-list__item">
                 <a class="documents-list__item-file">
@@ -64,7 +65,7 @@
 </main>
 
 <footer class="page-footer">
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <h1 class="contacts-header">Наши контакты</h1>
         <ul class="contacts-list">
             <li class="contacts-list_item">
@@ -73,7 +74,14 @@
                     <img class="contacts-list_item-icon" src="img/globe.png"
                          width="60" height="60" alt="Карта">
                 </p>
-                <a class="contacts-list_item-value" href="index.html">61 Oxford str., London, 3DG</a>
+                <p class="contacts-list_item-value">
+                    <span class="ymaps-geolink"
+                          data-type="geo"
+                          data-description="Россия, Усть-Катав, Центральная улица, 43"
+                          data-bounds="[[54.929873, 58.169896],[54.929237, 58.170009]]">
+                        Центральная улица, 43
+                    </span>
+                </p>
             </li>
             <li class="contacts-list_item">
                 <h1 class="contacts-list_item-header">Phone number</h1>
@@ -81,7 +89,7 @@
                     <img class="contacts-list_item-icon" src="img/phone.png"
                          width="60" height="60" alt="Телефон">
                 </p>
-                <tel class="contacts-list_item-value">1-800-643-4500</tel>
+                <a class="contacts-list_item-value" href="tel:+74951234567">+7 (495) 123-45-67</a>
             </li>
             <li class="contacts-list_item">
                 <h1 class="contacts-list_item-header">Email</h1>
@@ -89,7 +97,7 @@
                     <img class="contacts-list_item-icon" src="img/email.png"
                          width="60" height="60" alt="Почта">
                 </p>
-                <email class="contacts-list_item-value">info@company24.com</email>
+                <a class="contacts-list_item-value" href="mailto:example@mail.ru">example@mail.ru</a>
             </li>
         </ul>
     </section>
