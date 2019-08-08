@@ -48,9 +48,9 @@
 }
 
 .site-list__item a:hover {
-    background-color: #e6efff;
+    background-color: #2d729b;
 }
 
 .site-list__item a:active {
-    background-color: #345288;
+    background-color: #263d5f;
 }
