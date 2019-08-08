@@ -8,18 +8,18 @@
 }
 
 .contacts {
-    margin-top: 20px;
+    margin-top: 25px;
     min-height: 260px;
 
     text-align: center;
 
-    background-color: #263d5f;
+    background: #263d5f;
 }
 
 .contacts-header {
     margin: 15px 0 0;
 
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: #ffffff;
 }

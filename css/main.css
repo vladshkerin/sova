@@ -12,10 +12,8 @@
 
     text-align: center;
 
-    background-color: #345288;
-    background-image: url("../img/bg_main.png");
-    background-position: top center;
-    background-repeat: no-repeat;
+    background: #345288 url("../img/bg_main.png") no-repeat top center;
+    border-radius: 50% 100%;
 }
 
 .main-header__company-name {
@@ -55,12 +53,20 @@
 }
 
 .documents {
-    margin-top: 20px;
+    text-align: center;
+}
+
+.documents_header {
+    margin: 25px 0 0;
+
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .documents-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 
@@ -70,8 +76,14 @@
 .documents-list__item {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 
     text-align: center;
+}
+
+.documents-list__item:hover {
+    transform: scale(1.03);
+    border: 1px solid #000000;
 }
 
 .documents-list__item-file {
@@ -82,6 +94,7 @@
 
 
 .documents-list__item-header {
+    display: none;
     margin: 10px 0 0;
 
     font-size: 25px;

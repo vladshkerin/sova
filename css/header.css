@@ -37,6 +37,14 @@
     font-weight: bold;
 }
 
+.site-list__item {
+    box-shadow: 0 10px 0 -8px #345288;
+}
+
+.site-list__item:hover {
+    box-shadow: 0 5px 0 -2px #345288;
+}
+
 .site-list__item a {
     display: block;
     padding: 30px 10px;
@@ -45,12 +53,4 @@
 
     color: #000000;
     text-transform: uppercase;
-}
-
-.site-list__item a:hover {
-    background-color: #2d729b;
-}
-
-.site-list__item a:active {
-    background-color: #263d5f;
 }
