@@ -8,13 +8,30 @@
 .main-header {
     display: flex;
     flex-direction: column;
-    min-height: 675px;
+    min-height: 575px;
+    position: relative;
 
     text-align: center;
 
     background: #345288 url("../img/bg_main.png") no-repeat top center;
-    border-radius: 50% 100%;
+    border-radius: 60% 100%;
 }
+
+/*.main-header::before {*/
+/*    position: absolute;*/
+/*    top: 525px;*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    content: "";*/
+
+/*    border: 50px solid #000000;*/
+/*    border-right-color: #ffffff;*/
+/*    border-right-width: 600px;*/
+/*    border-left-color: #ffffff;*/
+/*    border-left-width: 600px;*/
+/*    border-top-color: transparent;*/
+/*    border-bottom-color: transparent;*/
+/*}*/
 
 .main-header__company-name {
     width: 500px;
@@ -65,7 +82,7 @@
 
 .documents-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -76,14 +93,21 @@
 .documents-list__item {
     display: flex;
     flex-direction: column;
+    width: 330px;
+    height: 468px;
     margin-top: 20px;
 
     text-align: center;
+    box-shadow: 0 0 5px 0 #345288;
+
+    opacity: 0.8;
 }
 
 .documents-list__item:hover {
-    transform: scale(1.03);
     border: 1px solid #000000;
+
+    transform: scale(1.03);
+    opacity: 1;
 }
 
 .documents-list__item-file {
