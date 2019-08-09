@@ -70,11 +70,12 @@
 }
 
 .documents {
+    margin: 25px 0 0;
     text-align: center;
 }
 
 .documents_header {
-    margin: 25px 0 0;
+    margin: 0;
 
     font-size: 25px;
     font-weight: bold;
@@ -84,7 +85,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 10px 0 0;
     padding: 0;
 
     list-style: none;
@@ -93,9 +94,9 @@
 .documents-list__item {
     display: flex;
     flex-direction: column;
-    width: 330px;
-    height: 468px;
-    margin-top: 20px;
+    width: 340px;
+    height: 480px;
+    margin: 25px 0 0;
 
     text-align: center;
     box-shadow: 0 0 5px 0 #345288;
