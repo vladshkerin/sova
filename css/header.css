@@ -45,13 +45,16 @@
     box-shadow: 0 5px 0 -2px #345288;
 }
 
-/*.site-list__item a:hover {*/
-/*    background-color: #2d729b;*/
-/*}*/
+/* Uncomment for change hover items in navigation */
+/*
+.site-list__item a:hover {
+    background-color: #2d729b;
+}
 
-/*.site-list__item a:active {*/
-/*    background-color: #263d5f;*/
-/*}*/
+.site-list__item a:active {
+    background-color: #263d5f;
+}
+*/
 
 .site-list__item a {
     display: block;
