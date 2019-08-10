@@ -103,7 +103,7 @@
     min-height: 480px;
 
     text-align: center;
-    box-shadow: 0 0 5px 0 #345288;
+    box-shadow: 0 0 10px 0 #345288;
 
     opacity: 0.8;
 }
@@ -129,6 +129,8 @@
     display: block;
     width: 340px;
     height: 480px;
+
+    cursor: pointer;
 }
 
 .document__image {
