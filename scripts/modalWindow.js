@@ -1,6 +1,7 @@
 const modalWindow = document.querySelector('.modal-window');
+const modalImage = document.querySelector('.modal-window__img');
 const btnClose = document.querySelector('.modal-window__btn-close');
-const listItem = document.querySelector('.documents-list__item');
+const documentFiles = document.querySelectorAll('.document__file');
 
 function modalOpen(obj) {
     obj.classList.remove('modal-window--close');
@@ -15,10 +16,19 @@ function modalClose(obj) {
     }, 170);
 }
 
-listItem.addEventListener('click', (e) => {
-    e.preventDefault();
-    modalOpen(modalWindow);
-});
+function addEvents(obj) {
+    for (let i = 0; i < obj.length; i++) {
+        const imgElm = obj[i].querySelector('.document__image');
+        const imgStr = imgElm.src.replace('.jpg', '_2x.jpg');
+
+        obj[i].addEventListener('click', (e) => {
+            e.preventDefault();
+
+            modalImage.src = imgStr;
+            modalOpen(modalWindow);
+        });
+    }
+}
 
 btnClose.addEventListener('click', (e) => {
     e.preventDefault();
@@ -27,9 +37,10 @@ btnClose.addEventListener('click', (e) => {
 
 window.addEventListener("keydown", (e) => {
     if (e.keyCode === 27) {
-        console.log('keyCode === 27');
         if (modalWindow.classList.contains("modal-window--open")) {
             modalClose(modalWindow);
         }
     }
 });
+
+addEvents(documentFiles);
