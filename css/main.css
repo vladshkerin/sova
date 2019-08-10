@@ -103,9 +103,11 @@
 
 .documents-list__item:hover {
     border: 1px solid #000000;
-
-    transform: scale(1.03);
     opacity: 1;
+
+    transform: scale(1.02);
+    transition-duration: 200ms;
+    transition-property: transform;
 }
 
 .documents-list__item-file {
