@@ -2,17 +2,20 @@ const modalWindow = document.querySelector('.modal-window');
 const modalImage = document.querySelector('.modal-window__img');
 const btnClose = document.querySelector('.modal-window__btn-close');
 const documentFiles = document.querySelectorAll('.document__file');
+const shadow = document.querySelector('.shadow');
 
-function modalOpen(obj) {
-    obj.classList.remove('modal-window--close');
-    obj.classList.add('modal-window--open');
+function modalOpen(obj1, obj2) {
+    obj1.classList.add('shadow--open');
+    obj2.classList.remove('modal-window--close');
+    obj2.classList.add('modal-window--open');
 }
 
-function modalClose(obj) {
-    obj.classList.add('modal-window--close');
+function modalClose(obj1, obj2) {
+    obj2.classList.add('modal-window--close');
 
     setTimeout(() => {
-        obj.classList.remove('modal-window--open');
+        obj1.classList.remove('shadow--open');
+        obj2.classList.remove('modal-window--open');
     }, 170);
 }
 
@@ -25,20 +28,25 @@ function addEvents(obj) {
             e.preventDefault();
 
             modalImage.src = imgStr;
-            modalOpen(modalWindow);
+            modalOpen(shadow, modalWindow);
         });
     }
 }
 
 btnClose.addEventListener('click', (e) => {
     e.preventDefault();
-    modalClose(modalWindow);
+    modalClose(shadow, modalWindow);
+});
+
+shadow.addEventListener('click', (e) => {
+    e.preventDefault();
+    modalClose(shadow, modalWindow);
 });
 
 window.addEventListener("keydown", (e) => {
     if (e.keyCode === 27) {
         if (modalWindow.classList.contains("modal-window--open")) {
-            modalClose(modalWindow);
+            modalClose(shadow, modalWindow);
         }
     }
 });
