@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+.btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 26px;
+    height: 26px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.btn-close::before,
+.btn-close::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: 2px;
+
+    width: 22px;
+    height: 4px;
+
+    background: #000000;
+}
+
+.btn-close::before {
+    transform: rotate(45deg);
+}
+
+.btn-close::after {
+    transform: rotate(-45deg);
+}

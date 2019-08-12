@@ -1,7 +1,7 @@
+const documentFiles = document.querySelectorAll('.document__file');
 const modalWindow = document.querySelector('.modal-window');
 const modalImage = document.querySelector('.modal-window__img');
-const btnClose = document.querySelector('.modal-window__btn-close');
-const documentFiles = document.querySelectorAll('.document__file');
+const btnClose = document.querySelector('.modal-window .btn-close');
 const shadow = document.querySelector('.shadow');
 
 function modalOpen(obj1, obj2) {

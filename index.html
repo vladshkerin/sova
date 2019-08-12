@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Торговая компания «СОВА»</title>
-    <!--    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd30d275-b73a-4297-81d8-52e146fd72fa&lang=ru_RU&load=Geolink"-->
-    <!--            type="text/javascript"></script>-->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/scaffolding.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/modal.css" rel="stylesheet">
+    <link href="css/map.css" rel="stylesheet">
+    <link href="css/button.css" rel="stylesheet">
 </head>
 <body>
 
@@ -132,31 +132,21 @@
                 <li class="contacts-list_item">
                     <h1 class="contacts-list_item-header">Address</h1>
                     <p class="contacts-list_item-picture">
-                        <img class="contacts-list_item-icon" src="img/globe.png"
-                             width="60" height="60" alt="Карта">
+                        <img src="img/globe.png" width="60" height="60" alt="Карта">
                     </p>
-                    <p class="contacts-list_item-value">
-                    <span class="ymaps-geolink"
-                          data-type="geo"
-                          data-description="Россия, Усть-Катав, Центральная улица, 43"
-                          data-bounds="[[54.929873, 58.169896],[54.929237, 58.170009]]">
-                        Центральная улица, 43
-                    </span>
-                    </p>
+                    <a class="contacts-list_item-value" href="#">Центральная улица, 43</a>
                 </li>
                 <li class="contacts-list_item">
                     <h1 class="contacts-list_item-header">Phone number</h1>
                     <p class="contacts-list_item-picture">
-                        <img class="contacts-list_item-icon" src="img/phone.png"
-                             width="60" height="60" alt="Телефон">
+                        <img src="img/phone.png" width="60" height="60" alt="Телефон">
                     </p>
                     <a class="contacts-list_item-value" href="tel:+74951234567">+7 (495) 123-45-67</a>
                 </li>
                 <li class="contacts-list_item">
                     <h1 class="contacts-list_item-header">Email</h1>
                     <p class="contacts-list_item-picture">
-                        <img class="contacts-list_item-icon" src="img/email.png"
-                             width="60" height="60" alt="Почта">
+                        <img src="img/email.png" width="60" height="60" alt="Почта">
                     </p>
                     <a class="contacts-list_item-value" href="mailto:example@mail.ru">example@mail.ru</a>
                 </li>
@@ -169,17 +159,26 @@
     </div>
 </footer>
 
-<section class="modal-window">
-    <h2 class="modal-window-header--hidden">Модальное окно</h2>
+<div class="modal-window">
+    <h2 class="modal-window-header--hidden">Модальное окно документов</h2>
     <p class="modal-window__content">
         <img class="modal-window__img" src="" alt="Документ">
     </p>
-    <button class="modal-window__btn-close" type="button">Закрыть</button>
-</section>
+    <button class="btn-close" type="button">Закрыть</button>
+</div>
+
+<div class="map">
+    <h2 class="map-header--hidden">Яндекс карта</h2>
+    <div id="map-area" class="map-area"></div>
+    <button class="btn-close" type="button">Закрыть</button>
+</div>
 
 <div class="shadow"></div>
 
+<script src="https://api-maps.yandex.ru/2.1/?apikey=bd30d275-b73a-4297-81d8-52e146fd72fa&lang=ru_RU&load=Map,Placemark"
+        type="text/javascript"></script>
 <script src="scripts/modalWindow.js"></script>
+<script src="scripts/map.js"></script>
 
 </body>
 </html>
