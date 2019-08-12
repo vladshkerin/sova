@@ -2,7 +2,7 @@ const documentFiles = document.querySelectorAll('.document__file');
 const modalWindow = document.querySelector('.modal-window');
 const modalImage = document.querySelector('.modal-window__img');
 const btnClose = document.querySelector('.modal-window .btn-close');
-const shadow = document.querySelector('.shadow');
+const shadowDoc = document.querySelector('.shadow');
 
 function modalOpen(obj1, obj2) {
     obj1.classList.add('shadow--open');
@@ -28,25 +28,25 @@ function addEvents(obj) {
             e.preventDefault();
 
             modalImage.src = imgStr;
-            modalOpen(shadow, modalWindow);
+            modalOpen(shadowDoc, modalWindow);
         });
     }
 }
 
 btnClose.addEventListener('click', (e) => {
     e.preventDefault();
-    modalClose(shadow, modalWindow);
+    modalClose(shadowDoc, modalWindow);
 });
 
-shadow.addEventListener('click', (e) => {
+shadowDoc.addEventListener('click', (e) => {
     e.preventDefault();
-    modalClose(shadow, modalWindow);
+    modalClose(shadowDoc, modalWindow);
 });
 
 window.addEventListener("keydown", (e) => {
     if (e.keyCode === 27) {
         if (modalWindow.classList.contains("modal-window--open")) {
-            modalClose(shadow, modalWindow);
+            modalClose(shadowDoc, modalWindow);
         }
     }
 });

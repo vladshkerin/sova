@@ -47,13 +47,13 @@ btnCloseMap.addEventListener('click', (e) => {
 
 shadowMap.addEventListener('click', (e) => {
     e.preventDefault();
-    modalClose(shadow, mapElem);
+    modalClose(shadowMap, mapElem);
 });
 
 window.addEventListener("keydown", (e) => {
     if (e.keyCode === 27) {
         if (mapElem.classList.contains("modal-window--open")) {
-            modalClose(shadow, mapElem);
+            modalClose(shadowMap, mapElem);
         }
     }
 });
