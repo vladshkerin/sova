@@ -22,7 +22,7 @@ function modalClose(obj1, obj2) {
 function addEvents(obj) {
     for (let i = 0; i < obj.length; i++) {
         const imgElm = obj[i].querySelector('.document__image');
-        const imgStr = imgElm.src.replace('.jpg', '_2x.jpg');
+        const imgStr = imgElm.src.replace('sm.jpg', 'md.jpg');
 
         obj[i].addEventListener('click', (e) => {
             e.preventDefault();
