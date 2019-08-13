@@ -1,0 +1,7 @@
+# IntelliJ project files
+.idea
+out
+build
+gen
+node_modules
+package-lock.json
