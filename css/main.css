@@ -13,25 +13,6 @@
     border-radius: 60% 100%;
 }
 
-/* Uncomment for change style background */
-/*
-.main-header::before {
-    position: absolute;
-    top: 525px;
-    width: 0;
-    height: 0;
-    content: "";
-
-    border: 50px solid #000000;
-    border-right-color: #ffffff;
-    border-right-width: 600px;
-    border-left-color: #ffffff;
-    border-left-width: 600px;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-}
-*/
-
 .main-header__company-name {
     width: 500px;
     margin: 0 auto;
