@@ -1,2 +1,2 @@
 # sova
-Website of the trade organization "Sova"
+Веб-сайт торговой компании "СОВА"
