@@ -1,6 +1,7 @@
 const {src, dest, lastRun, watch, series, parallel} = require('gulp');
 const rigger = require('gulp-rigger'),
     less = require('gulp-less'),
+    babel = require('gulp-babel'),
     autoprefixer = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
@@ -47,7 +48,7 @@ const config = {
 function html() {
     return src(path.src.html)
         .pipe(rigger()) // импортировать один файла в другой (//= header.html)
-        .pipe(dest(path.build.html))
+        .pipe(dest(path.build.html)) // выгрузить в папку build
         .pipe(browserSync.reload({stream: true}));
 }
 
@@ -63,6 +64,9 @@ function style() {
 function js() {
     return src(path.src.js, {sourcemaps: true}) // инициализировать sourcemap
         .pipe(rigger()) // импортировать один файла в другой (//= map.js)
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify()) // сжать JS код
         .pipe(dest(path.build.js, {sourcemaps: true})) // прописать карты
         .pipe(browserSync.reload({stream: true}));
