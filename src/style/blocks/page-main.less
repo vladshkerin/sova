@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+.main-header {
+  position: relative;
+  margin-top: 10px;
+  min-height: 575px;
+
+  text-align: center;
+
+  background: #345288 url("../img/bg_main.jpg") no-repeat top center;
+  border-radius: 60% 100%;
+}
+
+.main-header__company-name {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-left: 20px;
+
+  font-size: 55px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: lowercase;
+  letter-spacing: 30px;
+}
+
+.main-header__company-title {
+  margin: auto 0;
+  padding-top: 220px;
+}
+
+.main-header__company-title-image {
+  width: 330px;
+  height: 110px;
+}
+
+.main-header__company-description {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 70px;
+
+  font-size: 30px;
+  font-weight: normal;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.documents {
+  margin: 25px 0 0;
+  text-align: center;
+}
+
+.documents_header {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.documents-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 10px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.documents-list__item {
+  margin: 25px 0 0;
+  width: 340px;
+}
+
+.document {
+  display: flex;
+  flex-direction: column;
+  min-width: 340px;
+  min-height: 480px;
+
+  text-align: center;
+  box-shadow: 0 0 10px 0 #345288;
+
+  opacity: 0.8;
+}
+
+.document:hover {
+  border: 1px solid #000000;
+  opacity: 1;
+
+  transform: scale(1.02);
+  transition-duration: 200ms;
+  transition-property: transform;
+}
+
+.document__header {
+  margin: 10px 0 0;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.document__file {
+  order: -1;
+  display: block;
+  width: 340px;
+  height: 480px;
+
+  cursor: pointer;
+}
+
+.document__image {
+  max-width: 340px;
+}
