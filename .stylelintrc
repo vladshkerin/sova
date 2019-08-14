@@ -10,5 +10,5 @@
       }
     ]
   },
-  "ignoreFiles": "sass/normalize.scss"
+  "ignoreFiles": "normalize.less"
 }
