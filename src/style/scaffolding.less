@@ -2,48 +2,45 @@
    Scaffolding
    ========================================================================== */
 
-body {
-    min-width: 1200px;
-    min-height: 1250px;
-    margin: 0;
-    padding: 0;
+@import "variables";
 
-    font-family: @primary-font;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 24px;
-    color: black;
+body {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-style: normal;
+  line-height: 24px;
+  color: @black-color;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-    position: relative;
+  position: relative;
 
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
+  width: @desktop-width;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 [class*="--hidden"]:not(:focus):not(:active) {
-    position: absolute;
+  position: absolute;
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
