@@ -1,3 +1,6 @@
+/*
+    Ленивая загрузка изображений
+ */
 (function lazyLoad() {
     let lazy = [];
 
@@ -37,11 +40,12 @@
         });
     }
 
-    function registerListener(event, func) {
-        if (window.addEventListener) {
-            window.addEventListener(event, func)
+    function registerListener(event, func, obj) {
+        if (!obj) obj = window;
+        if (obj.addEventListener) {
+            obj.addEventListener(event, func);
         } else {
-            window.attachEvent('on' + event, func)
+            obj.attachEvent('on' + event, func);
         }
     }
 })();
