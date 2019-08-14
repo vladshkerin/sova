@@ -2,95 +2,98 @@
    Modal
    ========================================================================== */
 
-@keyframes show-shadow {
-    0% {
-        opacity: 0;
-    }
+@import "../variables";
+@import "../mixins";
 
-    100% {
-        opacity: 0.3;
-    }
+@keyframes show-shadow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
 }
 
 @keyframes increase-scale {
-    0% {
-        transform: scale(0.9);
-        opacity: 0.6;
-    }
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes reduce-scale {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
 
-    100% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
 }
 
 .modal-window {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
 
-    display: none;
-    width: 600px;
-    height: 800px;
-    margin-top: -400px;
-    margin-left: -300px;
+  display: none;
+  width: 600px;
+  height: 800px;
+  margin-top: -400px;
+  margin-left: -300px;
 
-    background: #ffffff;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.75);
+  background: @white-color;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.75);
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .modal-window--open {
-    display: block;
+  display: block;
 
-    animation: increase-scale 200ms;
+  animation: increase-scale 200ms;
 }
 
 .modal-window--close {
-    animation: reduce-scale 200ms;
+  animation: reduce-scale 200ms;
 }
 
 .modal-window__content {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .modal-window__img {
-    position: relative;
+  position: relative;
 
-    width: 600px;
-    height: 800px;
+  width: 600px;
+  height: 800px;
 }
 
 .shadow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 
-    display: none;
-    width: 100%;
-    height: 100%;
+  display: none;
+  width: 100%;
+  height: 100%;
 
-    background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .shadow--open {
-    display: block;
+  display: block;
 
-    animation: show-shadow 100ms;
+  animation: show-shadow 100ms;
 }

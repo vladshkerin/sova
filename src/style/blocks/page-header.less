@@ -1,56 +1,56 @@
 /* ==========================================================================
-   Header
+   Page header
    ========================================================================== */
 
+@import "../variables";
+@import "../mixins";
+
 .page-header .container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .page-header__logo {
-    height: 84px;
+  height: 84px;
 
-    text-align: center;
+  text-align: center;
 }
 
 .page-header__logo img {
-    width: 88px;
-    height: 65px;
-    padding: 10px 10px;
+  width: image-width(@logo-path);
+  height: image-height(@logo-path);
+  padding: 10px 10px;
 }
 
 .main-nav {
-    width: 200px;
+  width: 200px;
 }
 
 .main-nav__list {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
+  .no-list();
 }
 
 .site-list {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .site-list__item {
-    box-shadow: 0 10px 0 -8px #345288;
-}
+  box-shadow: 0 10px 0 -8px @secondary-color;
 
-.site-list__item:hover {
-    box-shadow: 0 5px 0 -2px #345288;
+  &:hover {
+    box-shadow: 0 5px 0 -2px @secondary-color;
+  }
 }
 
 .site-list__item a {
-    display: block;
-    padding: 30px 10px;
+  display: block;
+  padding: 30px 10px;
 
-    font-size: 16px;
+  font-size: 16px;
 
-    color: #000000;
-    text-transform: uppercase;
+  color: @black-color;
+  text-transform: uppercase;
 }

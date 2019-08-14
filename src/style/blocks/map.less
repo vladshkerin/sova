@@ -2,59 +2,62 @@
    Map
    ========================================================================== */
 
-@keyframes increase-scale {
-    0% {
-        transform: scale(0.9);
-        opacity: 0.6;
-    }
+@import "../variables";
+@import "../mixins";
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+@keyframes increase-scale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes reduce-scale {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
 
-    100% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
 }
 
 .map {
-    position: fixed;
-    top: 55%;
-    left: 38%;
-    z-index: 9999;
+  position: fixed;
+  top: 55%;
+  left: 38%;
+  z-index: 9999;
 
-    display: none;
-    width: 900px;
-    height: 700px;
-    margin-top: -400px;
-    margin-left: -300px;
+  display: none;
+  width: 900px;
+  height: 700px;
+  margin-top: -400px;
+  margin-left: -300px;
 
-    background: #ffffff;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.75);
+  background: @white-color;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.75);
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .map-area {
-    width: 900px;
-    height: 700px;
+  width: 900px;
+  height: 700px;
 }
 
 .modal-window--open {
-    display: block;
+  display: block;
 
-    animation: increase-scale 200ms;
+  animation: increase-scale 200ms;
 }
 
 .modal-window--close {
-    animation: reduce-scale 200ms;
+  animation: reduce-scale 200ms;
 }

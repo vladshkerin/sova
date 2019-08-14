@@ -1,86 +1,87 @@
 /* ==========================================================================
-   Footer
+   Page footer
    ========================================================================== */
 
+@import "../variables";
+@import "../mixins";
+
 .page-footer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts {
-    margin-top: 25px;
-    min-height: 260px;
+  margin-top: 25px;
+  min-height: 250px;
 
-    text-align: center;
+  text-align: center;
 
-    background: #263d5f;
+  background: @primary-color;
 }
 
-.contacts-header {
-    margin: 0;
-    padding: 15px 0 0;
+.contacts__header {
+  margin: 0;
+  padding: 15px 0 0;
 
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  color: @white-color;
 }
 
 .contacts-list {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
 
-    list-style: none;
+  .no-list(20px);
 }
 
-.contacts-list_item {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    min-height: 170px;
+.contacts-list__item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 170px;
 
-    border-right: 1px solid #00ff00;
-}
+  border-right: 1px solid @green-color;
 
-.contacts-list_item:last-child {
+  &:last-child {
     border: none;
+  }
 }
 
-.contacts-list_item-header {
-    margin: 20px 0 0;
+.contact__header {
+  margin: 20px 0 0;
 
-    font-size: 20px;
-    font-weight: normal;
-    color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  color: @white-color;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-.contacts-list_item-picture {
-    order: -1;
-    margin: 35px 0 0;
+.contact__picture {
+  order: -1;
+  margin: 35px 0 0;
 }
 
-.contacts-list_item-value {
-    display: block;
-    min-width: 150px;
-    margin: 5px auto 0;
+.contact__value {
+  display: block;
+  min-width: 150px;
+  margin: 5px auto 0;
 
-    font-size: 15px;
-    font-weight: normal;
-    color: #00ff00;
+  font-size: 15px;
+  font-weight: normal;
+  color: @green-color;
 }
 
 .copyright {
-    min-height: 35px;
+  min-height: 35px;
 
-    text-align: center;
+  text-align: center;
 }
 
-.copyright_description {
-    margin: 10px 0 0;
+.copyright__description {
+  margin: 10px 0 0;
 
-    font-size: 15px;
-    font-weight: bold;
+  font-size: 15px;
+  font-weight: bold;
 }

@@ -1,5 +1,10 @@
-no-list {
-  margin: 0;
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+.no-list(@margin-top: 0, @margin-left: 0, @margin-bottom: 0, @margin-right: 0) {
+  margin: @margin-top @margin-right @margin-bottom @margin-left;
   padding: 0;
+
   list-style: none;
 }

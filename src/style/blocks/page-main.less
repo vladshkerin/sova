@@ -1,6 +1,9 @@
 /* ==========================================================================
-   Main
+   Page main
    ========================================================================== */
+
+@import "../variables";
+@import "../mixins";
 
 .main-header {
   position: relative;
@@ -9,7 +12,7 @@
 
   text-align: center;
 
-  background: #345288 url("../img/bg_main.jpg") no-repeat top center;
+  background: @secondary-color url(@bg-image-path) no-repeat top center;
   border-radius: 60% 100%;
 }
 
@@ -21,7 +24,7 @@
 
   font-size: 55px;
   font-weight: bold;
-  color: #ffffff;
+  color: @white-color;
   text-transform: lowercase;
   letter-spacing: 30px;
 }
@@ -31,7 +34,7 @@
   padding-top: 220px;
 }
 
-.main-header__company-title-image {
+.main-header__company-title img {
   width: 330px;
   height: 110px;
 }
@@ -43,7 +46,7 @@
 
   font-size: 30px;
   font-weight: normal;
-  color: #ffffff;
+  color: @white-color;
   letter-spacing: 1px;
 }
 
@@ -52,7 +55,7 @@
   text-align: center;
 }
 
-.documents_header {
+.documents__header {
   margin: 0;
 
   font-size: 25px;
@@ -63,10 +66,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 10px 0 0;
-  padding: 0;
 
-  list-style: none;
+  .no-list();
 }
 
 .documents-list__item {
@@ -81,18 +82,18 @@
   min-height: 480px;
 
   text-align: center;
-  box-shadow: 0 0 10px 0 #345288;
+  box-shadow: 0 0 10px 0 @secondary-color;
 
   opacity: 0.8;
-}
 
-.document:hover {
-  border: 1px solid #000000;
-  opacity: 1;
+  &:hover {
+    border: 1px solid @black-color;
+    opacity: 1;
 
-  transform: scale(1.02);
-  transition-duration: 200ms;
-  transition-property: transform;
+    transform: scale(1.02);
+    transition-duration: 200ms;
+    transition-property: transform;
+  }
 }
 
 .document__header {
@@ -111,6 +112,6 @@
   cursor: pointer;
 }
 
-.document__image {
+.document__file img {
   max-width: 340px;
 }
