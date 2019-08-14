@@ -12,7 +12,7 @@
 <header class="page-header">
     <div class="container">
         <a class="page-header__logo" href="index.html">
-            <img src="img/logotype.png" width="88" height="65" alt="Торговая компания «СОВА»">
+            <img src="img/logo.png" width="88" height="65" alt="Торговая компания «СОВА»">
         </a>
 
         <nav class="main-nav">
@@ -33,20 +33,19 @@
         <section class="main-header">
             <h1 class="main-header__company-name--hidden">Сова</h1>
             <div class="main-header__company-title">
-                <img class="main-header__company-title-image" src="img/title.png"
-                     width="606" height="191" alt="Торговая компания Сова">
+                <img src="img/title.png" width="606" height="191" alt="Торговая компания Сова">
             </div>
             <p class="main-header__company-description">Специализируемся на продаже алкоголя</p>
         </section>
 
         <section class="documents" id="documents">
-            <h1 class="documents_header">Учредительные документы</h1>
+            <h1 class="documents__header">Учредительные документы</h1>
             <ul class="documents-list">
                 <li class="documents-list__item">
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/information_contragent_1_sm.jpg"
+                            <img src="img/doc/information_contragent_1_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -55,7 +54,7 @@
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/information_contragent_2_sm.jpg"
+                            <img src="img/doc/information_contragent_2_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -64,7 +63,7 @@
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/charter_sm.jpg"
+                            <img src="img/doc/charter_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -73,7 +72,7 @@
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/kpp_sm.jpg"
+                            <img src="img/doc/kpp_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -82,7 +81,7 @@
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/ogrn_sm.jpg"
+                            <img src="img/doc/ogrn_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -91,7 +90,7 @@
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/requisites_sm.jpg"
+                            <img src="img/doc/requisites_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -100,7 +99,7 @@
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/license_1_sm.jpg"
+                            <img src="img/doc/license_1_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -109,7 +108,7 @@
                     <section class="document">
                         <h1 class="document__header--hidden">Документ</h1>
                         <div class="document__file">
-                            <img class="document__image" src="img/doc/license_2_sm.jpg"
+                            <img src="img/doc/license_2_sm.jpg"
                                  width="340" height="480" alt="Изображение документа">
                         </div>
                     </section>
@@ -122,34 +121,40 @@
 <footer class="page-footer">
     <div class="container">
         <section class="contacts" id="contacts">
-            <h1 class="contacts-header">Наши контакты</h1>
+            <h1 class="contacts__header">Наши контакты</h1>
             <ul class="contacts-list">
-                <li class="contacts-list_item">
-                    <h1 class="contacts-list_item-header">Address</h1>
-                    <p class="contacts-list_item-picture">
-                        <img src="img/globe.png" width="60" height="60" alt="Карта">
-                    </p>
-                    <a class="contacts-list_item-value" href="#">Центральная улица, 43</a>
+                <li class="contacts-list__item">
+                    <div class="contact">
+                        <h1 class="contact__header">Address</h1>
+                        <p class="contact__picture">
+                            <img src="img/globe.png" width="60" height="60" alt="Карта">
+                        </p>
+                        <a class="contact__value" href="#">Центральная улица, 43</a>
+                    </div>
                 </li>
-                <li class="contacts-list_item">
-                    <h1 class="contacts-list_item-header">Phone number</h1>
-                    <p class="contacts-list_item-picture">
-                        <img src="img/phone.png" width="60" height="60" alt="Телефон">
-                    </p>
-                    <a class="contacts-list_item-value" href="tel:+74951234567">+7 (495) 123-45-67</a>
+                <li class="contacts-list__item">
+                    <div class="contact">
+                        <h1 class="contact__header">Phone number</h1>
+                        <p class="contact__picture">
+                            <img src="img/phone.png" width="60" height="60" alt="Телефон">
+                        </p>
+                        <a class="contact__value" href="tel:+74951234567">+7 (495) 123-45-67</a>
+                    </div>
                 </li>
-                <li class="contacts-list_item">
-                    <h1 class="contacts-list_item-header">Email</h1>
-                    <p class="contacts-list_item-picture">
-                        <img src="img/email.png" width="60" height="60" alt="Почта">
-                    </p>
-                    <a class="contacts-list_item-value" href="mailto:example@mail.ru">example@mail.ru</a>
+                <li class="contacts-list__item">
+                    <div class="contact">
+                        <h1 class="contact__header">Email</h1>
+                        <p class="contact__picture">
+                            <img src="img/email.png" width="60" height="60" alt="Почта">
+                        </p>
+                        <a class="contact__value" href="mailto:example@mail.ru">example@mail.ru</a>
+                    </div>
                 </li>
             </ul>
         </section>
 
         <section class="copyright">
-            <p class="copyright_description">Website by Comrades @ 2019</p>
+            <p class="copyright__description">Website by Comrades @ 2019</p>
         </section>
     </div>
 </footer>
@@ -157,7 +162,7 @@
 <div class="modal-window">
     <h2 class="modal-window-header--hidden">Модальное окно документов</h2>
     <p class="modal-window__content">
-        <img class="modal-window__img" src="" alt="Документ">
+        <img src="" alt="Документ">
     </p>
     <button class="btn-close" type="button">Закрыть</button>
 </div>

@@ -1,7 +1,7 @@
 /* Инициализация и подключение Яндекс карты */
-function map() {
+(function map() {
     const btnCloseMap = document.querySelector('.map .btn-close');
-    const btnOpenMap = document.querySelector('.contacts-list_item:first-child .contacts-list_item-value');
+    const btnOpenMap = document.querySelector('.contacts-list__item:first-child .contact__value');
     const shadowMap = document.querySelector('.shadow');
     const mapElem = document.querySelector('.map');
     let map;
@@ -57,6 +57,4 @@ function map() {
             }
         }
     });
-}
-
-map();
+})();

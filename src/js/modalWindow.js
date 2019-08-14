@@ -1,8 +1,8 @@
 /* Отображение модального окна с выводом изображений документов */
-function modalWindow() {
+(function modalWindow() {
     const documentFiles = document.querySelectorAll('.document__file');
     const modalWindow = document.querySelector('.modal-window');
-    const modalImage = document.querySelector('.modal-window__img');
+    const modalImage = document.querySelector('.modal-window__content img');
     const btnClose = document.querySelector('.modal-window .btn-close');
     const shadowDoc = document.querySelector('.shadow');
 
@@ -15,7 +15,7 @@ function modalWindow() {
     function modalClose(obj1, obj2) {
         obj2.classList.add('modal-window--close');
 
-        setTimeout(function () {
+        setTimeout(() => {
             obj1.classList.remove('shadow--open');
             obj2.classList.remove('modal-window--open');
         }, 170);
@@ -23,10 +23,10 @@ function modalWindow() {
 
     function addEvents(obj) {
         for (let i = 0; i < obj.length; i++) {
-            const imgElm = obj[i].querySelector('.document__image');
+            const imgElm = obj[i].querySelector('.document__file img');
             const imgStr = imgElm.src.replace('sm.jpg', 'md.jpg');
 
-            obj[i].addEventListener('click', function (e) {
+            obj[i].addEventListener('click', (e) => {
                 e.preventDefault();
 
                 modalImage.src = imgStr;
@@ -35,17 +35,17 @@ function modalWindow() {
         }
     }
 
-    btnClose.addEventListener('click', function (e) {
+    btnClose.addEventListener('click', (e) => {
         e.preventDefault();
         modalClose(shadowDoc, modalWindow);
     });
 
-    shadowDoc.addEventListener('click', function (e) {
+    shadowDoc.addEventListener('click', (e) => {
         e.preventDefault();
         modalClose(shadowDoc, modalWindow);
     });
 
-    window.addEventListener("keydown", function (e) {
+    window.addEventListener("keydown", (e) => {
         if (e.keyCode === 27) {
             if (modalWindow.classList.contains("modal-window--open")) {
                 modalClose(shadowDoc, modalWindow);
@@ -54,6 +54,4 @@ function modalWindow() {
     });
 
     addEvents(documentFiles);
-}
-
-modalWindow();
+})();
