@@ -1,57 +1,75 @@
-/* Отображение модального окна с выводом изображений документов */
+/*
+    Отображение модального окна с выводом изображений документов
+*/
 (function modalWindow() {
-    const documentFiles = document.querySelectorAll('.document__file');
-    const modalWindow = document.querySelector('.modal-window');
-    const modalImage = document.querySelector('.modal-window__content img');
+    const modalWin = document.querySelector('.modal-window');
+    const modalImg = document.querySelector('.modal-window__content img');
     const btnClose = document.querySelector('.modal-window .btn-close');
     const shadowDoc = document.querySelector('.shadow');
+    let docs = [];
 
-    function modalOpen(obj1, obj2) {
-        obj1.classList.add('shadow--open');
-        obj2.classList.remove('modal-window--close');
-        obj2.classList.add('modal-window--open');
+    registerListener('load', setVariables);
+    registerListener('load', addEvents);
+    registerListener('scroll', addEvents);
+
+    function setVariables() {
+        docs = document.querySelectorAll('.document__file');
     }
 
-    function modalClose(obj1, obj2) {
-        obj2.classList.add('modal-window--close');
+    function addEvents() {
+        for (let i = 0; i < docs.length; i++) {
+            const imgElm = docs[i].querySelector('.document__file img');
+            if (imgElm.src) {
+                const imgStr = imgElm.src.replace('sm.jpg', 'md.jpg');
 
-        setTimeout(() => {
-            obj1.classList.remove('shadow--open');
-            obj2.classList.remove('modal-window--open');
-        }, 170);
-    }
-
-    function addEvents(obj) {
-        for (let i = 0; i < obj.length; i++) {
-            const imgElm = obj[i].querySelector('.document__file img');
-            const imgStr = imgElm.src.replace('sm.jpg', 'md.jpg');
-
-            obj[i].addEventListener('click', (e) => {
-                e.preventDefault();
-
-                modalImage.src = imgStr;
-                modalOpen(shadowDoc, modalWindow);
-            });
+                registerListener('click', (e) => {
+                    e.preventDefault();
+                    modalImg.src = imgStr;
+                    modalOpen();
+                }, docs[i]);
+            }
         }
     }
 
-    btnClose.addEventListener('click', (e) => {
-        e.preventDefault();
-        modalClose(shadowDoc, modalWindow);
-    });
+    function modalOpen() {
+        shadowDoc.classList.add('shadow--open');
+        modalWin.classList.remove('modal-window--close');
+        modalWin.classList.add('modal-window--open');
+    }
 
-    shadowDoc.addEventListener('click', (e) => {
-        e.preventDefault();
-        modalClose(shadowDoc, modalWindow);
-    });
+    function modalClose() {
+        modalWin.classList.add('modal-window--close');
 
-    window.addEventListener("keydown", (e) => {
+        setTimeout(() => {
+            shadowDoc.classList.remove('shadow--open');
+            modalWin.classList.remove('modal-window--open');
+        }, 170);
+    }
+
+    registerListener("keydown", (e) => {
         if (e.keyCode === 27) {
-            if (modalWindow.classList.contains("modal-window--open")) {
-                modalClose(shadowDoc, modalWindow);
+            if (modalWin.classList.contains("modal-window--open")) {
+                modalClose(shadowDoc, modalWin);
             }
         }
     });
 
-    addEvents(documentFiles);
+    registerListener('click', (e) => {
+        e.preventDefault();
+        modalClose();
+    }, btnClose);
+
+    registerListener('click', (e) => {
+        e.preventDefault();
+        modalClose();
+    }, shadowDoc);
+
+    function registerListener(event, func, obj) {
+        if (!obj) obj = window;
+        if (obj.addEventListener) {
+            obj.addEventListener(event, func);
+        } else {
+            obj.attachEvent('on' + event, func);
+        }
+    }
 })();
