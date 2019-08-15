@@ -3,9 +3,15 @@
 */
 (function modalWindow() {
     const modalWin = document.querySelector('.modal-window');
-    const modalImg = document.querySelector('.modal-window__content img');
+    const img_1 = document.querySelector('.modal-window img:nth-child(1)');
+    const img_2 = document.querySelector('.modal-window img:nth-child(2)');
+    const sliderControls = document.querySelector('.slider-controls');
+    const sliderSlides = document.querySelector('.slider-slides');
+    const btn_1 = document.querySelector('#btn-1');
+    const btn_2 = document.querySelector('#btn-2');
     const btnClose = document.querySelector('.modal-window .btn-close');
     const shadow = document.querySelector('.shadow');
+    const placeholderPath = "img/placeholder.png";
     let docs = [];
 
     registerListener('load', setVariables);
@@ -24,10 +30,25 @@
 
                 registerListener('click', (e) => {
                     e.preventDefault();
-                    modalImg.src = imgStr;
+                    img_1.src = imgStr;
+
+                    manageSlider(imgStr);
                     modalOpen();
                 }, docs[i]);
             }
+        }
+    }
+
+    function manageSlider(imgStr) {
+        let idx = imgStr.search(/\w+1\w*.jpg/);
+        if (idx !== -1) {
+            img_2.src = imgStr.replace(/1/, '2');
+            sliderControls.classList.remove('controls--hidden');
+            sliderSlides.removeAttribute('style');
+        } else {
+            img_2.src = placeholderPath;
+            sliderControls.classList.add('controls--hidden');
+            sliderSlides.setAttribute('style', 'transform: translate(0);');
         }
     }
 

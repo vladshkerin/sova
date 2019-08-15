@@ -45,45 +45,6 @@
                         <div class="document__file">
                             <img class="lazy"
                                  src="img/placeholder.png"
-                                 data-src="img/doc/information_contragent_1_sm.jpg"
-                                 width="340"
-                                 height="480"
-                                 alt="Изображение документа"/>
-                        </div>
-                    </section>
-                </li>
-                <li class="documents-list__item">
-                    <section class="document">
-                        <h3 class="document__header--hidden">Документ</h3>
-                        <div class="document__file">
-                            <img class="lazy"
-                                 src="img/placeholder.png"
-                                 data-src="img/doc/information_contragent_2_sm.jpg"
-                                 width="340"
-                                 height="480"
-                                 alt="Изображение документа"/>
-                        </div>
-                    </section>
-                </li>
-                <li class="documents-list__item">
-                    <section class="document">
-                        <h3 class="document__header--hidden">Документ</h3>
-                        <div class="document__file">
-                            <img class="lazy"
-                                 src="img/placeholder.png"
-                                 data-src="img/doc/charter_sm.jpg"
-                                 width="340"
-                                 height="480"
-                                 alt="Изображение документа"/>
-                        </div>
-                    </section>
-                </li>
-                <li class="documents-list__item">
-                    <section class="document">
-                        <h3 class="document__header--hidden">Документ</h3>
-                        <div class="document__file">
-                            <img class="lazy"
-                                 src="img/placeholder.png"
                                  data-src="img/doc/kpp_sm.jpg"
                                  width="340"
                                  height="480"
@@ -110,19 +71,6 @@
                         <div class="document__file">
                             <img class="lazy"
                                  src="img/placeholder.png"
-                                 data-src="img/doc/requisites_sm.jpg"
-                                 width="340"
-                                 height="480"
-                                 alt="Изображение документа"/>
-                        </div>
-                    </section>
-                </li>
-                <li class="documents-list__item">
-                    <section class="document">
-                        <h3 class="document__header--hidden">Документ</h3>
-                        <div class="document__file">
-                            <img class="lazy"
-                                 src="img/placeholder.png"
                                  data-src="img/doc/license_1_sm.jpg"
                                  width="340"
                                  height="480"
@@ -136,7 +84,33 @@
                         <div class="document__file">
                             <img class="lazy"
                                  src="img/placeholder.png"
-                                 data-src="img/doc/license_2_sm.jpg"
+                                 data-src="img/doc/information_contragent_1_sm.jpg"
+                                 width="340"
+                                 height="480"
+                                 alt="Изображение документа"/>
+                        </div>
+                    </section>
+                </li>
+                <li class="documents-list__item">
+                    <section class="document">
+                        <h3 class="document__header--hidden">Документ</h3>
+                        <div class="document__file">
+                            <img class="lazy"
+                                 src="img/placeholder.png"
+                                 data-src="img/doc/charter_sm.jpg"
+                                 width="340"
+                                 height="480"
+                                 alt="Изображение документа"/>
+                        </div>
+                    </section>
+                </li>
+                <li class="documents-list__item">
+                    <section class="document">
+                        <h3 class="document__header--hidden">Документ</h3>
+                        <div class="document__file">
+                            <img class="lazy"
+                                 src="img/placeholder.png"
+                                 data-src="img/doc/requisites_sm.jpg"
                                  width="340"
                                  height="480"
                                  alt="Изображение документа"/>
@@ -191,12 +165,26 @@
 
 <div class="modal-window">
     <h2 class="modal-window-header--hidden">Модальное окно документов</h2>
-    <p class="modal-window__content">
-        <img src="img/placeholder.png"
-             width="800"
-             height="600"
-             alt="Документ">
-    </p>
+    <div class="slider">
+        <input id="btn-1" type="radio" name="toggle" checked>
+        <input id="btn-2" type="radio" name="toggle">
+        <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+        </div>
+        <div class="slider-inner">
+            <div class="slider-slides">
+                <img src="img/doc/information_contragent_1.jpg"
+                     width="800"
+                     height="600"
+                     alt="Документ">
+                <img src="img/placeholder.png"
+                     width="800"
+                     height="600"
+                     alt="Документ">
+            </div>
+        </div>
+    </div>
     <button class="btn-close" type="button">Закрыть</button>
 </div>
 
