@@ -1,25 +1,12 @@
-/* Инициализация и подключение Яндекс карты */
+/*
+    Инициализация и подключение Яндекс карты
+*/
 (function map() {
-    const btnCloseMap = document.querySelector('.map .btn-close');
-    const btnOpenMap = document.querySelector('.contacts-list__item:first-child .contact__value');
-    const shadowMap = document.querySelector('.shadow');
     const mapElem = document.querySelector('.map');
+    const btnOpen = document.querySelector('.contacts-list__item:first-child .contact__value');
+    const btnClose = document.querySelector('.map .btn-close');
+    const shadow = document.querySelector('.shadow');
     let map;
-
-    function mapOpen(obj1, obj2) {
-        obj1.classList.add('shadow--open');
-        obj2.classList.remove('modal-window--close');
-        obj2.classList.add('modal-window--open');
-    }
-
-    function mapClose(obj1, obj2) {
-        obj2.classList.add('modal-window--close');
-
-        setTimeout(() => {
-            obj1.classList.remove('shadow--open');
-            obj2.classList.remove('modal-window--open');
-        }, 170);
-    }
 
     function initMap() {
         if (!map) {
@@ -33,28 +20,51 @@
         }
     }
 
-    btnOpenMap.addEventListener('click', (e) => {
-        e.preventDefault();
+    function mapOpen() {
+        shadow.classList.add('shadow--open');
+        mapElem.classList.remove('modal-window--close');
+        mapElem.classList.add('modal-window--open');
+    }
 
-        mapOpen(shadowMap, mapElem);
+    function mapClose() {
+        mapElem.classList.add('modal-window--close');
+
+        setTimeout(() => {
+            shadow.classList.remove('shadow--open');
+            mapElem.classList.remove('modal-window--open');
+        }, 170);
+    }
+
+    registerListener('click', (e) => {
+        e.preventDefault();
+        mapOpen();
         ymaps.ready(initMap);
-    });
+    }, btnOpen);
 
-    btnCloseMap.addEventListener('click', (e) => {
+    registerListener('click', (e) => {
         e.preventDefault();
-        mapClose(shadowMap, mapElem);
-    });
+        mapClose();
+    }, btnClose);
 
-    shadowMap.addEventListener('click', (e) => {
+    registerListener('click', (e) => {
         e.preventDefault();
-        mapClose(shadowMap, mapElem);
-    });
+        mapClose();
+    }, shadow);
 
-    window.addEventListener("keydown", (e) => {
+    registerListener("keydown", (e) => {
         if (e.keyCode === 27) {
             if (mapElem.classList.contains("modal-window--open")) {
-                mapClose(shadowMap, mapElem);
+                mapClose();
             }
         }
     });
+
+    function registerListener(event, func, obj) {
+        if (!obj) obj = window;
+        if (obj.addEventListener) {
+            obj.addEventListener(event, func);
+        } else {
+            obj.attachEvent('on' + event, func);
+        }
+    }
 })();
