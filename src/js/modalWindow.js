@@ -5,7 +5,7 @@
     const modalWin = document.querySelector('.modal-window');
     const modalImg = document.querySelector('.modal-window__content img');
     const btnClose = document.querySelector('.modal-window .btn-close');
-    const shadowDoc = document.querySelector('.shadow');
+    const shadow = document.querySelector('.shadow');
     let docs = [];
 
     registerListener('load', setVariables);
@@ -32,7 +32,7 @@
     }
 
     function modalOpen() {
-        shadowDoc.classList.add('shadow--open');
+        shadow.classList.add('shadow--open');
         modalWin.classList.remove('modal-window--close');
         modalWin.classList.add('modal-window--open');
     }
@@ -41,7 +41,7 @@
         modalWin.classList.add('modal-window--close');
 
         setTimeout(() => {
-            shadowDoc.classList.remove('shadow--open');
+            shadow.classList.remove('shadow--open');
             modalWin.classList.remove('modal-window--open');
         }, 170);
     }
@@ -49,7 +49,7 @@
     registerListener("keydown", (e) => {
         if (e.keyCode === 27) {
             if (modalWin.classList.contains("modal-window--open")) {
-                modalClose(shadowDoc, modalWin);
+                modalClose();
             }
         }
     });
@@ -62,7 +62,7 @@
     registerListener('click', (e) => {
         e.preventDefault();
         modalClose();
-    }, shadowDoc);
+    }, shadow);
 
     function registerListener(event, func, obj) {
         if (!obj) obj = window;
