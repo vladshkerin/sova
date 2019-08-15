@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Торговая компания «СОВА»</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
 </head>
 <body>
 
@@ -174,7 +174,7 @@
         </div>
         <div class="slider-inner">
             <div class="slider-slides">
-                <img src="img/doc/information_contragent_1.jpg"
+                <img src="img/placeholder.png"
                      width="800"
                      height="600"
                      alt="Документ">
@@ -197,8 +197,8 @@
 <div class="shadow"></div>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=bd30d275-b73a-4297-81d8-52e146fd72fa&lang=ru_RU&load=Map,Placemark"
-        type="text/javascript"></script>
-<script src="js/main.js"></script>
+        type="text/javascript" defer async></script>
+<script src="js/main.js" defer async></script>
 
 </body>
 </html>
