@@ -3,14 +3,14 @@
 */
 (function modalWindow() {
     const modalWin = document.querySelector('.modal-window');
-    const img_1 = document.querySelector('.modal-window img:nth-child(1)');
-    const img_2 = document.querySelector('.modal-window img:nth-child(2)');
     const sliderControls = document.querySelector('.slider-controls');
     const sliderSlides = document.querySelector('.slider-slides');
-    const btn_1 = document.querySelector('#btn-1');
-    const btn_2 = document.querySelector('#btn-2');
-    const btnClose = document.querySelector('.modal-window .btn-close');
     const shadow = document.querySelector('.shadow');
+    const img_1 = document.querySelector('.modal-window img:nth-child(1)');
+    const img_2 = document.querySelector('.modal-window img:nth-child(2)');
+    const btn_left = document.querySelector('#btn-left');
+    const btn_right = document.querySelector('#btn-right');
+    const btnClose = document.querySelector('.shadow .btn-close');
     const placeholderPath = "img/placeholder.png";
     let docs = [];
 

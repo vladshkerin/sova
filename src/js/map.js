@@ -3,9 +3,9 @@
 */
 (function map() {
     const mapElem = document.querySelector('.map');
-    const btnOpen = document.querySelector('.contacts-list__item:first-child .contact__value');
-    const btnClose = document.querySelector('.map .btn-close');
     const shadow = document.querySelector('.shadow');
+    const btnOpen = document.querySelector('.contacts-list__item:first-child .contact__value');
+    const btnClose = document.querySelector('.shadow .btn-close');
     let coords = [54.926766, 58.158243];
     let map;
 

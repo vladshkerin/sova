@@ -44,7 +44,7 @@
                         <h3 class="document__header--hidden">Документ</h3>
                         <div class="document__file">
                             <img class="lazy"
-                                 src="img/placeholder.png"
+                                 src="img/load.gif"
                                  data-src="img/doc/information_contragent_1_sm.jpg"
                                  width="340"
                                  height="480"
@@ -57,7 +57,7 @@
                         <h3 class="document__header--hidden">Документ</h3>
                         <div class="document__file">
                             <img class="lazy"
-                                 src="img/placeholder.png"
+                                 src="img/load.gif"
                                  data-src="img/doc/charter_sm.jpg"
                                  width="340"
                                  height="480"
@@ -70,7 +70,7 @@
                         <h3 class="document__header--hidden">Документ</h3>
                         <div class="document__file">
                             <img class="lazy"
-                                 src="img/placeholder.png"
+                                 src="img/load.gif"
                                  data-src="img/doc/requisites_sm.jpg"
                                  width="340"
                                  height="480"
@@ -170,11 +170,11 @@
 <div class="modal-window">
     <h2 class="modal-window-header--hidden">Модальное окно документов</h2>
     <div class="slider">
-        <input id="btn-1" type="radio" name="toggle" checked>
-        <input id="btn-2" type="radio" name="toggle">
+        <input id="btn-left" type="radio" name="toggle" checked>
+        <input id="btn-right" type="radio" name="toggle">
         <div class="slider-controls">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
+            <label for="btn-left"></label>
+            <label for="btn-right"></label>
         </div>
         <div class="slider-inner">
             <div class="slider-slides">
@@ -183,16 +183,16 @@
             </div>
         </div>
     </div>
-    <button class="btn-close" type="button">Закрыть</button>
 </div>
 
 <div class="map">
     <h2 class="map-header--hidden">Яндекс карта</h2>
     <div id="map-area" class="map-area"></div>
-    <button class="btn-close" type="button">Закрыть</button>
 </div>
 
-<div class="shadow"></div>
+<div class="shadow">
+    <button class="btn-close" type="button">Закрыть</button>
+</div>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=2d1f7e60-6211-445d-9513-9c8607300f76&lang=ru_RU&load=Map,Placemark"
         type="text/javascript" defer async></script>

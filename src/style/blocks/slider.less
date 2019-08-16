@@ -46,15 +46,15 @@
   transition: background-color 0.2s;
 }
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+#btn-left:checked ~ .slider-controls label[for="btn-left"],
+#btn-right:checked ~ .slider-controls label[for="btn-right"] {
   background-color: #666666;
 }
 
-#btn-1:checked ~ .slider-inner .slider-slides {
+#btn-left:checked ~ .slider-inner .slider-slides {
   transform: translate(0);
 }
 
-#btn-2:checked ~ .slider-inner .slider-slides {
+#btn-right:checked ~ .slider-inner .slider-slides {
   transform: translate(-600px);
 }
