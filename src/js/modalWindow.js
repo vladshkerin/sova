@@ -6,11 +6,10 @@
     const sliderControls = document.querySelector('.slider-controls');
     const sliderSlides = document.querySelector('.slider-slides');
     const shadow = document.querySelector('.shadow');
-    const img_1 = document.querySelector('.modal-window img:nth-child(1)');
-    const img_2 = document.querySelector('.modal-window img:nth-child(2)');
-    const btn_left = document.querySelector('#btn-left');
-    const btn_right = document.querySelector('#btn-right');
-    const btnClose = document.querySelector('.shadow .btn-close');
+    const img_1 = document.querySelector('.slider-slides img:nth-child(1)');
+    const img_2 = document.querySelector('.slider-slides img:nth-child(2)');
+    const btnClose = document.querySelector('.shadow__btn-close');
+    const btnDownload = document.querySelector('.slider__btn-download');
     const placeholderPath = "img/placeholder.png";
     let docs = [];
 
@@ -24,13 +23,15 @@
 
     function addEvents() {
         for (let i = 0; i < docs.length; i++) {
-            const imgElm = docs[i].querySelector('.document__file img');
-            if (imgElm.src) {
-                const imgStr = imgElm.src.replace('sm.jpg', 'md.jpg');
+            let imgStr = docs[i].querySelector('.document__file img').src;
+            if (imgStr) {
+                imgStr = imgStr.replace('sm.jpg', 'md.jpg');
 
                 registerListener('click', (e) => {
                     e.preventDefault();
+
                     img_1.src = imgStr;
+                    btnDownload.href = imgStr.replace(/\/img(\/doc\/[a-zA-Z_]*)_.*.jpg/, '$1.pdf');
 
                     manageSlider(imgStr);
                     modalOpen();

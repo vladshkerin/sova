@@ -16,23 +16,26 @@ const path = {
         css: 'build/css/',
         js: 'build/js/',
         img: 'build/img/',
-        fonts: 'build/fonts/'
+        fonts: 'build/fonts/',
+        doc: 'build/doc/',
     },
     src: {
         html: 'src/*.html',
         style: 'src/style/main.less',
         js: 'src/js/main.js',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        doc: 'src/doc/**/*.*',
     },
     watch: {
         html: 'src/**/*.html',
         style: 'src/style/**/*.less',
         js: 'src/js/**/*.js',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        doc: 'src/doc/**/*.*',
     },
-    clean: './build'
+    clean: './build',
 };
 
 const config = {
@@ -89,6 +92,11 @@ function fonts() {
         .pipe(dest(path.build.fonts));
 }
 
+function doc() {
+    return src(path.src.doc)
+        .pipe(dest(path.build.doc));
+}
+
 function cleaner(cb) {
     return rimraf(path.clean, cb); // удалить папку build
 }
@@ -99,6 +107,7 @@ function watcher() {
     watch([path.watch.js], js);
     watch([path.watch.img], image);
     watch([path.watch.fonts], fonts);
+    watch([path.watch.doc], fonts);
 }
 
 function webserver() {
@@ -110,10 +119,11 @@ exports.style = style;
 exports.js = js;
 exports.image = image;
 exports.fonts = fonts;
+exports.doc = doc;
 exports.clean = cleaner;
 exports.build = series(
     cleaner,
-    parallel(html, style, js, image, fonts)
+    parallel(html, style, js, image, fonts, doc)
 );
 exports.watch = watcher;
 exports.webserver = webserver;
@@ -121,7 +131,7 @@ exports.default = series(
     series(
         cleaner,
         parallel(
-            html, style, js, image, fonts
+            html, style, js, image, fonts, doc
         ),
         parallel(
             watcher, webserver

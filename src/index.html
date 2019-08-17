@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Торговая компания «СОВА»</title>
-    <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -44,8 +44,8 @@
                         <h3 class="document__header--hidden">Документ</h3>
                         <div class="document__file">
                             <img class="lazy"
-                                 src="img/load.gif"
-                                 data-src="img/doc/information_contragent_1_sm.jpg"
+                                 src="img/placeholder.png"
+                                 data-src="img/doc/information_contractor_1_sm.jpg"
                                  width="340"
                                  height="480"
                                  alt="Изображение документа"/>
@@ -57,7 +57,7 @@
                         <h3 class="document__header--hidden">Документ</h3>
                         <div class="document__file">
                             <img class="lazy"
-                                 src="img/load.gif"
+                                 src="img/placeholder.png"
                                  data-src="img/doc/charter_sm.jpg"
                                  width="340"
                                  height="480"
@@ -70,8 +70,8 @@
                         <h3 class="document__header--hidden">Документ</h3>
                         <div class="document__file">
                             <img class="lazy"
-                                 src="img/load.gif"
-                                 data-src="img/doc/requisites_sm.jpg"
+                                 src="img/placeholder.png"
+                                     data-src="img/doc/requisites_sm.jpg"
                                  width="340"
                                  height="480"
                                  alt="Изображение документа"/>
@@ -160,7 +160,7 @@
         <section class="copyright">
             <p class="copyright__description">
                 Website by
-                <a class="copyright__link" href="https://vk.com/m_a_s_t_e_r_komp">MasterKomp</a>
+                <a class="copyright__link" href="https://vk.com/m_a_s_t_e_r_komp">MasterComp</a>
                 @ 2019
             </p>
         </section>
@@ -170,6 +170,9 @@
 <div class="modal-window">
     <h2 class="modal-window-header--hidden">Модальное окно документов</h2>
     <div class="slider">
+        <a class="slider__btn-download" href="doc/information_contractor.pdf" alt="Загрузить документ" download>
+            <img src="img/download.png" width="100" height="100">
+        </a>
         <input id="btn-left" type="radio" name="toggle" checked>
         <input id="btn-right" type="radio" name="toggle">
         <div class="slider-controls">
@@ -178,8 +181,8 @@
         </div>
         <div class="slider-inner">
             <div class="slider-slides">
-                <img src="img/placeholder.png" width="800" height="600" alt="Документ">
-                <img src="img/placeholder.png" width="800" height="600" alt="Документ">
+                <img src="img/placeholder.png" width="340" height="480" alt="Документ">
+                <img src="img/placeholder.png" width="340" height="480" alt="Документ">
             </div>
         </div>
     </div>
@@ -191,7 +194,7 @@
 </div>
 
 <div class="shadow">
-    <button class="btn-close" type="button">Закрыть</button>
+    <button class="shadow__btn-close" type="button">Закрыть</button>
 </div>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=2d1f7e60-6211-445d-9513-9c8607300f76&lang=ru_RU&load=Map,Placemark"
