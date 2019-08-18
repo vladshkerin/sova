@@ -1,51 +1,46 @@
-/*
-    Ленивая загрузка изображений
+"use strict";
+
+/**
+ *  Ленивая загрузка изображений.
  */
-(function lazyLoad() {
-    let lazy = [];
 
-    registerListener('load', setLazy);
-    registerListener('load', lazyLoad);
-    registerListener('scroll', lazyLoad);
+(function () {
+  const registerListener = window.utils.registerListener;
+  let lazy = [];
 
-    function setLazy() {
-        lazy = document.querySelectorAll('.lazy');
+  registerListener("load", setLazy);
+  registerListener("load", lazyLoad);
+  registerListener("scroll", lazyLoad);
+
+  function setLazy() {
+    lazy = document.querySelectorAll(".lazy");
+  }
+
+  function lazyLoad() {
+    for (let i = 0; i < lazy.length; i++) {
+      if (isInViewport(lazy[i])) {
+        lazy[i].src = lazy[i].getAttribute("data-src");
+        lazy[i].removeAttribute("data-src");
+      }
     }
 
-    function lazyLoad() {
-        for (let i = 0; i < lazy.length; i++) {
-            if (isInViewport(lazy[i])) {
-                lazy[i].src = lazy[i].getAttribute('data-src');
-                lazy[i].removeAttribute('data-src');
-            }
-        }
+    cleanLazy();
+  }
 
-        cleanLazy();
-    }
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
 
-    function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
+    return (
+      rect.bottom >= 0 &&
+      rect.right >= 0 &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
-        return (
-            rect.bottom >= 0 &&
-            rect.right >= 0 &&
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function cleanLazy() {
-        lazy = Array.prototype.filter.call(lazy, (l) => {
-            return l.getAttribute('data-src');
-        });
-    }
-
-    function registerListener(event, func, obj) {
-        if (!obj) obj = window;
-        if (obj.addEventListener) {
-            obj.addEventListener(event, func);
-        } else {
-            obj.attachEvent('on' + event, func);
-        }
-    }
+  function cleanLazy() {
+    lazy = Array.prototype.filter.call(lazy, (l) => {
+      return l.getAttribute("data-src");
+    });
+  }
 })();
