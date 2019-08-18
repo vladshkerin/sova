@@ -6,6 +6,8 @@
 
 (function () {
   const registerListener = window.utils.registerListener;
+  const modalWindowClose = window.utils.modalWindowClose;
+  const modalWindowOpen = window.utils.modalWindowOpen;
   const modalWin = document.querySelector(".modal-window");
   const sliderControls = document.querySelector(".slider-controls");
   const sliderSlides = document.querySelector(".slider-slides");
@@ -38,7 +40,7 @@
           btnDownload.href = imgStr.replace(/\/img(\/doc\/[a-zA-Z_]*)_.*.jpg/, "$1.pdf");
 
           manageSlider(imgStr);
-          modalOpen();
+          modalWindowOpen(modalWin);
         }, docs[i]);
       }
     }
@@ -57,36 +59,21 @@
     }
   }
 
-  function modalOpen() {
-    shadow.classList.add("shadow--open");
-    modalWin.classList.remove("modal-window--close");
-    modalWin.classList.add("modal-window--open");
-  }
-
-  function modalClose() {
-    modalWin.classList.add("modal-window--close");
-
-    setTimeout(() => {
-      shadow.classList.remove("shadow--open");
-      modalWin.classList.remove("modal-window--open");
-    }, 170);
-  }
-
   registerListener("keydown", (e) => {
     if (e.keyCode === window.const.ESC_KEYCODE) {
       if (modalWin.classList.contains("modal-window--open")) {
-        modalClose();
+        modalWindowClose(modalWin);
       }
     }
   });
 
   registerListener("click", (e) => {
     e.preventDefault();
-    modalClose();
+    modalWindowClose(modalWin);
   }, btnClose);
 
   registerListener("click", (e) => {
     e.preventDefault();
-    modalClose();
+    modalWindowClose(modalWin);
   }, shadow);
 })();

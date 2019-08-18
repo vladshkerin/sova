@@ -6,6 +6,8 @@
 
 (function () {
   const registerListener = window.utils.registerListener;
+  const modalWindowClose = window.utils.modalWindowClose;
+  const modalWindowOpen = window.utils.modalWindowOpen;
   const mapElem = document.querySelector(".map");
   const shadow = document.querySelector(".shadow");
   const btnOpen = document.querySelector(".contacts-list__item:first-child .contact__value");
@@ -25,41 +27,26 @@
     }
   }
 
-  function mapOpen() {
-    shadow.classList.add("shadow--open");
-    mapElem.classList.remove("modal-window--close");
-    mapElem.classList.add("modal-window--open");
-  }
-
-  function mapClose() {
-    mapElem.classList.add("modal-window--close");
-
-    setTimeout(() => {
-      shadow.classList.remove("shadow--open");
-      mapElem.classList.remove("modal-window--open");
-    }, 170);
-  }
-
   registerListener("click", (e) => {
     e.preventDefault();
-    mapOpen();
+    modalWindowOpen(mapElem);
     ymaps.ready(initMap);
   }, btnOpen);
 
   registerListener("click", (e) => {
     e.preventDefault();
-    mapClose();
+    modalWindowClose(mapElem);
   }, btnClose);
 
   registerListener("click", (e) => {
     e.preventDefault();
-    mapClose();
+    modalWindowClose(mapElem);
   }, shadow);
 
   registerListener("keydown", (e) => {
     if (e.keyCode === 27) {
       if (mapElem.classList.contains("modal-window--open")) {
-        mapClose();
+        modalWindowClose(mapElem);
       }
     }
   });
